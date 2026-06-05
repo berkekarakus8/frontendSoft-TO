@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind dersler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .classic-btn {
+            background-color: coral;
+            padding: 8px,16px;
+            border-radius: 7px;
+            border: none;
+            cursor:pointer;
+
+        }
+    </style>
+</head>
+<body class="bg-slate-100 p-8">
+    <div class="max-w-xl mx-auto bg-black p-7 rounded shadow">
+        <h1 class="text-xl font-bold mb-4">Modern Css ve tailwind</h1>
+
+        <div class="mb-6"></div>
+        <h2 class="font-semibold mb-2">Klasik css ve tailwind</h2>
+        <div class="flex gap-4" >
+            <button class="classic-btn">klasik ss buton</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">
+                Tailwind css butonb
+            </button>
+        </div>
+    </div>
+    <div class="mb-6">
+        <h2 class="font-semibold mb-2">2. temel sınıflar</h2>
+        <div class="space-y-2">
+            <p class="text-lg text-red-500 font-bold">kırmızı buyuk metin(text-lg text-red-500 font-bold)</p>
+
+            <div class="bg-yellow-100 border p-4 rounded text-sm">
+                sARI KUTU (bg-yellow-100 border p-4 rounded text-sm)
+            </div>
+            <div class="bg-slate-800 text-white p-4 rounded text-center hover:bg-slate-700">
+                Hover deneme (hover:bg-slate-700)
+            
+
+            </div>
+        </div>
+        <div class="mt-8 border-t pt-6 flex-wrap gap-3 text-xs">
+            <a href="deneme.html" target="_blank" class="bg-indigo-600" text-white font-bold px-4 py-2 rounded hover:bg-indigo-750 transition-colors>deneme</a>
+            <a href="form.html" target="_blank" class="bg-indigo-600" text-white font-bold px-4 py-2 rounded hover:bg-indigo-750 transition-colors>form</a>
+            <a href="flex.html" target="_blank" class="bg-indigo-600" text-white font-bold px-4 py-2 rounded hover:bg-indigo-750 transition-colors>flex</a>
+
+        </div>
+    </div>
+</body>
+</html>
