@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center">
+    <div id="box" class="bg-white p-8 rounded-xl shadow text-center transition-colors duration-300">
+        <h1 class="text-4xl font-black my-4 mb-2">canlı sayac</h1>
+        <div id="number" class="text-4xl text-blue-300 my-4">0</div>
+    
+     <div class="flex gap-4 justify-center">
+        <button onclick="change(-1)" class="bg-red-500 text-white px-4 rounded font-bold">-</button>
+        <button onclick="change(+1)" class="bg-green-500 text-white px-4 rounded font-bold">+</button>
+     </div>
+    </div>
+    
+    <script>
+        let count = 0;
+        const box = document.getElementById('box')
+        const number = document.getElementById('number')
+      function change(e){
+
+    
+        if ((count === 100 && e > 0) || (count === -100 && e < 0)) {
+            return;
+        }
+
+        count += e;
+        console.log(count);
+        number.textContent = count;
+
+        if(count > 0){
+
+
+            let green = 255 - Math.floor((count / 100) * 155);
+
+            box.style.backgroundColor = rgb(0, ${green}, 0);
+
+        }else if(count < 0){
+
+
+            let red = 255 - Math.floor((Math.abs(count) / 100) * 155);
+
+            box.style.backgroundColor = rgb(${red}, 0, 0);
+
+        }else{
+
+            box.style.backgroundColor = "white";
+
+        }
+}
+
+    </script>
+    
+</body>
+</html>
