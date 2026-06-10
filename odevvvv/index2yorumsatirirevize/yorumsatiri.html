@@ -1,0 +1,143 @@
+<!doctype html>
+<!-- html5 standardı -->
+<html lang="en">
+<!-- sayfanın dilinin İngilizce olduğunu verir -->
+<head>
+  <!-- tarayıcıya ait olan kısımların yazıldıgı bolum -->
+  <meta charset="UTF-8" />
+  <!-- ç-ğ-ş harflerinin düzgün görüntülenmesini sağlar -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Responsive tassarım-->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+  />
+  <!-- tailwind CSS kütüphanesini CDN üzerinden kutuphaneyi indirmeden kullanmayı saglar -->
+  <title>Document</title>
+  <!-- tarayıcı basligi -->
+</head>
+<body
+  class="bg-indigo-50 text-gray-800 font-sans min-h-screen p-8 flex flex-col items-center justify-center gap-6"
+>
+  <!--
+    bg-indigo-50      : açık mor arka plan
+    text-gray-800     : koyu gri yazı rengi
+    font-sans         : sans yazı tipi
+    min-h-screen      : minimum yükseklik ekran kadar olsun
+    p-8               : content ile border arası boslugu tanımlar
+    flex              : flexbox sistemini tanıtır
+    flex-col          : sutunları alt alta sıralar column un anlmındaki gib alt alta
+    items-center      : x ekseninde ortay alır
+    justify-center    : y ekseninde ortaya alır
+    gap-6             : elemanlar arasındaki boslugu tanımlar sayı yukseldikce bosluk artra
+  -->
+  <div class="text-center max-w-md">
+    <!--
+      text-center : yazılan contenti(yazıları) ortay lır
+      max-w-md    : maksimum genişliği 448px e sabitler
+    -->
+    <div>
+      <h1 class="text-xl font-bold text-gray-900 mb-2">
+        Fiyatlandırma Kartı Flex Column
+      </h1>
+      <!--
+        text-xl      : büyük yazı boyutu
+        font-bold    : semantik ve kalın yazı
+        text-gray-900: en koyu gri rengi tanımlar
+        mb-2         : border ile sayf genisliginin bottom(alt) kısmının boslugunu tanımşlr
+      -->
+      <p class="text-xs text-gray-500">
+        Kart elemanları üst üste sıralamak için flex-col, öne çıkan rozeti en
+        üstte göstermek için ise order-first sınıfı kullanacağız
+      </p>
+      <!--
+        text-xs       : en kucuk yazı boyutlrından biri
+        text-gray-500 : açık gri yazı rengi
+      -->
+    </div>
+    <div class="w-full max-w-xs bg-white border border-gray-200 rounded-2xl p-6 flex flex-col gap-4 shadow-sm">
+      <!--
+        w-full           : alabilecegi genisligin tamamını kaplar
+        max-w-xs         : maksimum genisliği yaklaşık 320px yapar
+        bg-white         : araka planı beyaz yapar
+        border           : kutuya kenar tanımlra
+        border-gray-200  : kenar rengini acık gri yapar
+        rounded-2xl      : kenar kesisimindeki sivrilikleri kldırır,yumusatır ve en yuvrlak kesisismi saglar
+        p-6              : content ile border arası boslugu tanımlar sayı arttıkca bosluk artar
+        flex             : flexbox sistemini tanıtır
+        flex-col         : sutunları alt alta sıralar column un anlmındaki gib alt alta
+        gap-4            : elemanlar arasındaki boslugu tanımlar sayı yukseldikce bosluk artra
+        shadow-sm        : kutuya golge efekti verir ama en dusuk seviyede
+      -->
+      <div>
+        <h2 class="text-sm font-bold text-gray-800 uppercase tracking-wider">
+          Standart Paket
+        </h2>
+        <!--
+          text-sm         : kucuk yazı boyutu
+          font-bold       : semantik ve kalın yazı
+          text-gray-800   : koyu gri rengi tanımlar mksimum koyu seviyesi 900 dur.
+          uppercase       : pythondaki .upper fonksiyonu gibi tum harfleri buyuk yapar
+          tracking-wider  : harfler araasındaki boslugu ayarlamaya yarar wider bu boslugu arttıran kısımdadır
+        -->
+        <p class="text-2xl font-extrabold text-gray-900 mt-1">
+          99 TL / Ay
+        </p>
+        <!--
+          text-2xl         : en buyuk yazı boyutu
+          font-extrabold   : en kalın yazı boyutu
+          text-gray-900    : en koyu gri rengi tanımlar
+          mt-1             : border ile ekran genisligi arasındaki top(ust) kısımdaki boslugu yarlar sayı arttıkca bosluk artar
+        -->
+      </div>
+      <div class="px-2.5 py-1 bg-indigo-100 border border-indigo-200 text-indigo-700 text-[9px] font-extrabold rounded-full self-start order-first uppercase tracking-wide">
+        En Popüler Paket(order-first)
+      </div>
+      <!--
+        px-2.5           : kutunun x eksenindeki bosluk
+        py-1             : kutunun y eksenindeki bosluk
+        bg-indigo-100    : açık mor arka plan sayı arttıkca koyulasır
+        border           : kutuya kenar tanımlar
+        border-indigo-200: kenarı mor rengine sabitler
+        text-indigo-700  : koyu mor yazı
+        text-[9px]       : kutudki yazı boyutunu 9px yapar
+        font-extrabold   : en klın yazı boyutu
+        rounded-full     : kpsul sekli saglar
+        self-start       : sadece bu flex i sola kaydırır
+        order-first      : css deki order 99999 ile aynı anlama gelir en uste cıkartır
+        uppercase        : pythondaki .upper fonksiyonu gibi tum harfleri buyuk yapar
+        tracking-wide    : normalden biraz daha genis bir aralık yaratır harfler arasında
+      -->
+      <div class="text-xs text-gray-500 space-y-2 border border-gray-100 pt-4">
+        <!--
+          text-xs         : kucuk yazı
+          text-gray-500   : yazıyı gri renkte tanımlar
+          space-y-2       : y eksenindeki elemanlar arasında bosluk yaratır
+          border          : kutuya kenar tanımlar
+          border-gray-100 : kenarı acık gri rengine tanımlar
+          pt-4            : content ile border arasındaki boslugun top(ust) kısmının boslugunu ayarlar sayı arttıkca bosluk da artar
+        -->
+        <p>1 Sınırsız Proje</p>
+        <p>25 tane kişisel proje</p>
+        <p>Grup Çalışması</p>
+      </div>
+      <button class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-xs font-semibold transition-colors mt-2">
+        Satın Al
+      </button>
+      <!--
+        w-full                : buton genisligini fuller
+        py-2                  : content ile border arasındaki boslugun ust ve alt kısmının boslugunu ayarlar sayı arttıkca bosluk da artar
+        bg-indigo-600         : mor arka plan
+        hover:bg-indigo-700   : butonun uzerine gelince koyu bir mor renk halini almasını saglar
+        text-white            : beyaz yazı
+        rounded-lg            : normalin bir ust seviyesinde yuvarlatılmıs buton koseleri
+        text-xs               : kucuk yazı boyutu
+        font-semibold         : yarı kalın yazı
+        transition-colors     : renk degisimini animasyonlu gibi yumusatarak gecmesine olanak tanır
+        mt-2                  : border ile ekran genisligi arasındaki boslugun top (ust) kısmını ayarlar sayı arttıkca bosluk artar
+      -->
+    </div>
+  </div>
+</body>
+</html>
+<!-- THE END :) -->

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sayilar = [1, 2, 3, 4, 5]
+        // sayilar adli bir dizi tanimladim
+
+const ikiyleCarp = sayilar.map(sayi => sayi * 2)
+// map: dizinin icindeki her elemani tek tek alip yeni bir dizi olusturur
+console.log("map sonucu:", ikiyleCarp)
+// map ile olusturulan yeni diziyi yazdiriyorum
+
+const bulunan = sayilar.find(sayi => sayi > 3)
+// find: kosulu saglayan ilk elemani bulur
+console.log("find sonucu:", bulunan)
+// ilk bulunan uygun elemani yazdirir
+
+const toplam = sayilar.reduce((acc, sayi) => acc + sayi, 0)
+// reduce: tum elemanlari tek bir degere indirger (toplama yaptim)
+console.log("reduce sonucu:", toplam)
+// toplam sonucu ekrana basilir
+
+const ciftler = sayilar.filter(sayi => sayi % 2 === 0)
+// filter: kosulu saglayan elemanlari yeni diziye atar
+console.log("filter sonucu:", ciftler)
+// sadece cift sayilar yazdirilir
+
+const varMi = sayilar.some(sayi => sayi > 4)
+// some: en az bir eleman sarti sagliyorsa true doner
+console.log("some sonucu:", varMi)
+// true veya false doner
+
+const hepsiCiftMi = sayilar.every(sayi => sayi % 2 === 0)
+// every: 2 ye bolunce kalan 0 ise ve tum elemanlar sarti sagliyorsa true doner
+console.log("every sonucu:", hepsiCiftMi)
+// tumu cift mi kontrol edilir
+
+sayilar.push(6)
+// push: dizinin sonuna yeni eleman ekler
+console.log("push sonrası:", sayilar)
+// guncellenmis dizi yazdirilir
+
+console.log("includes sonucu:", sayilar.includes(3))
+// includes: eleman dizide var mi kontrol eder
+
+
+
+const metin = "  Full Stack  "
+// bosluklu string tanimladim
+
+console.log("lowercase:", metin.toLowerCase())
+// toLowerCase: tum harfleri kucultur
+
+console.log("uppercase:", metin.toUpperCase())
+// toUpperCase: tum harfleri buyutur
+
+console.log("trim:", metin.trim())
+// trim: bastaki ve sondaki bosluklari siler
+
+
+
+const listeMetin = "elma,armut,muz"
+// virgullu string
+
+const dizi = listeMetin.split(",")
+// split: stringi parcalayarak diziye cevirir
+console.log("split sonucu:", dizi)
+// dizi halini yazdirir
+
+console.log("join sonucu:", dizi.join(" - "))
+// join: diziyi tekrar stringe cevirir
+
+
+
+let sayac = 0
+// sayac degiskeni
+
+const interval = setInterval(() => {
+  sayac++
+  // setInterval: Belirli bir kodu donguye alir gibi tekrarli sekilde calistirir ve her calismada sayac 1 artar
+
+  console.log("setInterval sayac:", sayac)
+  // sayac degeri yazdirilir
+
+  if (sayac === 5) {
+    clearInterval(interval)
+    // clearInterval: intervali durdurur
+
+    console.log("interval durduruldu")
+    // durdurma mesaji
+  }
+}, 1000)
+// 1000ms = 1 saniyede bir calisir
+
+
+
+    </script>
+    
+</body>
+</html>
