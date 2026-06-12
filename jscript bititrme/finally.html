@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Career Traclker</title>
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/5.0.4/typescript.min.js"></script>
+
+</head>
+
+<body class="bg-black text-green-400 p-4">
+
+  <h1 class="text-2xl font-bold mb-4">
+    Berke Career Tracker
+  </h1>
+
+  <!-- form -->
+  <div class="border border-green-500 p-3 mb-4">
+
+    <input id="sirket" class="w-full p-2 mb-2 bg-black border border-green-500 text-green-400" placeholder="Şirket" />
+
+    <input id="pozisyon" class="w-full p-2 mb-2 bg-black border border-green-500 text-green-400" placeholder="Pozisyon" />
+
+    <input id="not" class="w-full p-2 mb-2 bg-black border border-green-500 text-green-400" placeholder="Not" />
+
+    <button onclick="ekle()" class="bg-green-500 text-black px-3 py-1">
+      Ekle
+    </button>
+
+  </div>
+
+  <!-- listee -->
+  <div id="liste"></div>
+
+<script>
+
+let basvurular = JSON.parse(localStorage.getItem("basvurular")) || [];
+
+// function ekle kısmı
+function ekle() {
+
+  let sirket = document.getElementById("sirket").value;
+  let pozisyon = document.getElementById("pozisyon").value;
+  let not = document.getElementById("not").value;
+
+  let yeni = {
+    sirket: sirket,
+    pozisyon: pozisyon,
+    not: not
+  };
+
+  basvurular.push(yeni);
+
+  localStorage.setItem("basvurular", JSON.stringify(basvurular));
+
+  listele();
+}
+
+
+// liste yazdırma
+function listele() {
+
+  let liste = document.getElementById("liste");
+
+  liste.innerHTML = "";
+
+  basvurular.forEach(function (b, index) {
+
+    let div = document.createElement("div");
+    div.className = "border border-green-500 p-2 mb-2";
+
+    let sirket = document.createElement("p");
+    sirket.textContent = "Şirket: " + b.sirket;
+
+    let pozisyon = document.createElement("p");
+    pozisyon.textContent = "Pozisyon: " + b.pozisyon;
+
+    let not = document.createElement("p");
+    not.textContent = "Not: " + b.not;
+
+    let btn = document.createElement("button");
+    btn.textContent = "Sil";
+    btn.style.color = "red";
+
+    btn.addEventListener("click", function () {
+      sil(index);
+    });
+
+    div.appendChild(sirket);
+    div.appendChild(pozisyon);
+    div.appendChild(not);
+    div.appendChild(btn);
+
+    liste.appendChild(div);
+  });
+}
+
+
+// sil butonu
+function sil(index) {
+
+  basvurular.splice(index, 1);
+
+  localStorage.setItem("basvurular", JSON.stringify(basvurular));
+
+  listele();
+}
+
+
+// listeyi yazdırma (listele) fonksiyonu
+listele();
+
+</script>
+
+</body>
+</html>
