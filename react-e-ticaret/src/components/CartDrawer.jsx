@@ -37,7 +37,7 @@ export default function CartDrawer({
                   <div className="cart-item-info">
                     <h4 className="cart-item-title">{item.title}</h4>
                     <span className="cart-item-price">
-                      {item.price.toLocaleStrşng("tr-TR")} TL
+                      {item.price.toLocaleString("tr-TR")} TL
                     </span>
                     <div className="cart-item-qty">
                       <button
@@ -54,7 +54,12 @@ export default function CartDrawer({
                         +
                       </button>
                     </div>
-                    <span className="cart-item-remove" onClick={() =>onRemove(item.id)}>Kaldır</span>
+                    <span
+                      className="cart-item-remove"
+                      onClick={() => onRemove(item.id)}
+                    >
+                      Kaldır
+                    </span>
                   </div>
                 </div>
               ))
@@ -63,7 +68,7 @@ export default function CartDrawer({
           <div className="drawer-footer">
             <div className="cart-summary-row">
               <span>Ara Toplam</span>
-              <span>{total.toLocaleStrşng("tr-TR")} TL</span>
+              <span>{total.toLocaleString("tr-TR")} TL</span>
             </div>
             <div className="cart-summary-row">
               <span>Kargo</span>
@@ -71,7 +76,9 @@ export default function CartDrawer({
             </div>
             <div className="cart-summary-row">
               <span className="font-bold">Toplam</span>
-              <span className="cart-summary-total">{total.toLocaleStrşng("tr-TR")} TL</span>
+              <span className="cart-summary-total">
+                {total.toLocaleString("tr-TR")} TL
+              </span>
             </div>
             <button className="cart-checkout-btn">Alışverişi Tamamla</button>
           </div>

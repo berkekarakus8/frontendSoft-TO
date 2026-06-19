@@ -1,7 +1,7 @@
 export default function CategoriesList({categories,products,onCategoryClick}){
     const categoriesWithCount=categories.filter((c)=>c!=="Tumu").map((cat)=>({
         name:cat,
-        count:products.filter((p)=>p.category===cat).length;
+        count:products.filter((p)=>p.category===cat).length,
     }))
     return(
         <>
@@ -12,7 +12,7 @@ export default function CategoriesList({categories,products,onCategoryClick}){
             <div className="categories-grid">
 
                 {categoriesWithCount.map((cat)=>(
-                <div key={cat.name} className="category-card" onClick={onCategoryClick(cat.name)}
+                <div key={cat.name} className="category-card" onClick={()=>onCategoryClick(cat.name)}
                 >
                     <div className="category-icon-box">
                         <span>{cat.name.substring(0,1)}</span>

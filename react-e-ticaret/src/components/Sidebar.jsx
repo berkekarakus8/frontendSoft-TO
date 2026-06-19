@@ -1,12 +1,15 @@
 export default function Sidebar({
   categories,
   selectedCategory,
-  setSelectedCategory}
+  setSelectedCategory,
+  setView
+
+}
 ) {
   return (
     <>
       <aside className="sidebar">
-        <h2 className="sidebar-title">Kategoriler</h2>
+        <h2 className="sidebar-title" onClick={()=> setView('categories')} >Kategoriler</h2>
         <div className="sidebar-list">
           {categories.map((cat) => (
             <div

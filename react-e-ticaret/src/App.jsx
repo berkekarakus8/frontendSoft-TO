@@ -3,9 +3,9 @@ import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import ProductGrid from "./components/ProductGrid";
 import Footer from "./components/Footer";
+import { useState } from "react";
 import AddProductForm from "./components/AddProductForm";
 import { MOCK_PRODUCTS, MOCK_CATEGORIES } from "./productsMock";
-import { useState } from "react";
 import AboutUs from "./components/AboutUs";
 import HelpCenter from "./components/HelpCenter";
 import OrderTracking from "./components/OrderTracking";
@@ -14,35 +14,64 @@ import CategoriesList from "./components/CategoriesList";
 import ProductDetail from "./components/ProductDetail";
 import CartDrawer from "./components/CartDrawer";
 import LoginModal from "./components/LoginModal";
-function App() {
+import { UserProvider } from "./context/UserContext";
+import { ThemeProvider } from "./context/ThemeContext";
+
+function AppContent() {
   const [products, setProducts] = useState(MOCK_PRODUCTS);
   const [selectedCategory, setSelectedCategory] = useState("Tümü");
   const [view, setView] = useState("home");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchInput, setSearchInput] = useState("");
-  const [isLoginOpen,setIsLoginOpen]=useState(false);
-  
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [cart, setCart] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const handleAddProduct=(data)=>{
-    const newProduct={
-      id:Date.now(),
-      title:data.title,
-      price:Number(data.price),
-      category:data.category,
-      rating:5.0,
-      ratingCount:1,
-      image:data.image,
-      description:data.description,
+  const handleAddProduct = (data) => {
+    const newProduct = {
+      id: Date.now(),
+      title: data.title,
+      price: Number(data.price),
+      category: data.category,
+      rating: 5.0,
+      ratingCount: 1,
+      image: data.image,
+      description: data.description,
+    };
+    setProducts([newProduct, ...products]);
+  };
 
-    }
-    setProducts([newProduct,...products]);
-  }
+  const handleAddToCart = (product) => {
+    setCart((prevCart) => {
+      const exists = prevCart.find((item) => item.id === product.id);
+      if (exists) {
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item,
+        );
+      }
+      return [...prevCart, { ...product, quantity: 1 }];
+    });
+  };
 
+  const handleRemoveFromCart = (id) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
+  };
 
-
-
-
-
+  const handleUpdateQuantity = (id, delta) => {
+    setCart((prevCart) =>
+      prevCart
+        .map((item) => {
+          if (item.id === id) {
+            return { ...item, quantity: item.quantity + delta };
+          }
+          return item;
+        })
+        .filter((item) => item.quantity > 0),
+    );
+  };
 
   const filteredProducts = products.filter((p) => {
     const matchesCategory =
@@ -58,6 +87,23 @@ function App() {
     setSearchQuery(searchInput);
   };
 
+  const handleProductClick = (product) => {
+    setSelectedProduct(product);
+    setView("detail");
+  };
+
+  const handleBackToList = () => {
+    setSelectedProduct(null);
+    setView("home");
+  };
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    setView("home");
+  };
+
+  const cartCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
   return (
     <>
       <Header
@@ -67,6 +113,9 @@ function App() {
         setSearchQuery={setSearchQuery}
         setSelectedCategory={setSelectedCategory}
         setView={setView}
+        cartCount={cartCount}
+        onLoginClick={() => setIsLoginOpen(true)}
+        onCartClick={() => setIsCartOpen(true)}
       />
       <Navbar
         categories={MOCK_CATEGORIES}
@@ -75,18 +124,20 @@ function App() {
         setView={setView}
       />
 
-      {view === "home" ? (
+      {view === "home" && (
         <main className="main-layout">
           <Sidebar
             categories={MOCK_CATEGORIES}
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
+            setView={setView}
           />
 
           <div className="content-area">
             <div className="content-header">
               <h1 className="page-title">
-                {selectedCategory} {searchQuery && `-> "${searchQuery}"`} Ürünler
+                {selectedCategory} {searchQuery && `-> "${searchQuery}"`}{" "}
+                Ürünler
               </h1>
               <span className="text-sm">
                 Toplam {filteredProducts.length} Ürün
@@ -100,27 +151,67 @@ function App() {
                 </p>
               </div>
             ) : (
-              <ProductGrid products={filteredProducts} />
+              <ProductGrid
+                products={filteredProducts}
+                onAddToCart={handleAddProduct}
+                onProductClick={handleProductClick}
+              />
             )}
           </div>
         </main>
-      ) : (
-        <AddProductForm categories={MOCK_CATEGORIES}
-        setView={setView} onAddProduct={handleAddProduct}
+      )}
+      {view === "addProduct" && (
+        <AddProductForm
+          categories={MOCK_CATEGORIES}
+          setView={setView}
+          onAddProduct={handleAddProduct}
         />
       )}
-      <ProductDetail/>
-      <CategoriesList/>
-      <AboutUs/>
-      <HelpCenter/>
-      <OrderTracking/>
-      <ProductReturns/>
-      <CartDrawer/>
-      <LoginModal isOpen={isLoginOpen}
-      onClose={()=>setIsLoginOpen(false)}
+      {view === "detail" && (
+        <ProductDetail
+          product={selectedProduct}
+          onBack={handleBackToList}
+          onAddTocart={handleAddToCart}
+        />
+      )}
+      {view === "categories" && (
+        <CategoriesList
+          categories={MOCK_CATEGORIES}
+          products={products}
+          onCategoryClick={handleCategoryClick}
+        />
+      )}
+      
+      {view === "about" && <AboutUs />}
+
+      {view === "help" && <HelpCenter />}
+
+      {view === "tracking" && <OrderTracking />}
+
+      {view === "returns" && <ProductReturns />}
+
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cart}
+        onUpdateQuantity={handleUpdateQuantity}
+        onRemove={handleRemoveFromCart}
       />
-      <Footer />
+
+      <LoginModal isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+
+      <Footer setView={setView} setSelectedCategory={setSelectedCategory} />
     </>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <UserProvider>
+        <AppContent />
+      </UserProvider>
+    </ThemeProvider>
   );
 }
 
