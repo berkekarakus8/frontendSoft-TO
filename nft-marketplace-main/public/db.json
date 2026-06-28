@@ -1,0 +1,318 @@
+{
+  "users": [
+    {
+      "id": "usr_admin",
+      "email": "admin@nft.com",
+      "password": "admin",
+      "username": "Nexus_Admin",
+      "role": "admin",
+      "walletAddress": "0x000NEXUS",
+      "ethBalance": 0,
+      "usdBalance": 0
+    },
+    {
+      "id": "usr_1",
+      "email": "kullanici1@nft.com",
+      "password": "user",
+      "username": "CyberPunk99",
+      "role": "user",
+      "walletAddress": "0x1A2b3C",
+      "ethBalance": 2.5,
+      "usdBalance": 500
+    },
+    {
+      "id": "usr_2",
+      "email": "kullanici2@nft.com",
+      "password": "user",
+      "username": "HoloCollector",
+      "role": "user",
+      "walletAddress": "0x9Z8Y7X",
+      "ethBalance": 5.1,
+      "usdBalance": 1200
+    },
+    {
+      "id": "usr_3",
+      "email": "kripto_balina@nft.com",
+      "password": "whale",
+      "username": "kripto_balina",
+      "role": "user",
+      "walletAddress": "0xWHALE992831",
+      "ethBalance": 25.5,
+      "usdBalance": 63750
+    }
+  ],
+  "collections": [
+    {
+      "id": "col_1",
+      "name": "Cyber City Chronicles",
+      "creatorId": "usr_1",
+      "volume": 15.2,
+      "floorPrice": 0.5,
+      "items": 8
+    },
+    {
+      "id": "col_2",
+      "name": "Neon Gods",
+      "creatorId": "usr_2",
+      "volume": 42.0,
+      "floorPrice": 2.1,
+      "items": 8
+    },
+    {
+      "id": "col_3",
+      "name": "Pixel Metaverse",
+      "creatorId": "usr_3",
+      "volume": 85.0,
+      "floorPrice": 1.2,
+      "items": 12
+    },
+    {
+      "id": "col_4",
+      "name": "Derin Uzay",
+      "creatorId": "usr_1",
+      "volume": 6.5,
+      "floorPrice": 0.8,
+      "items": 4
+    }
+  ],
+  "nfts": [
+    {
+      "id": "nft_1",
+      "collectionId": "col_1",
+      "ownerId": "usr_1",
+      "creatorId": "usr_1",
+      "title": "Cyber Warrior #101",
+      "description": "Fütüristik zırhıyla siber evrenin koruyucusu.",
+      "category": "Sanat",
+      "price": 3.1,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWivv0vsudVlvUzFkWdrXWpulbVFANZcMAJXCIswE2D-9z8JAo9gTT24aBTuSrFbnipiVWigzj8DPWVFKJrARYd3pqRm0qzv2Scm2sFwzAt8oYUE1WjW8gPAsUKtGPle3fxkp6dSCf5RBwz7txobzFyE8nY7SFik3wwc40Ih7G_TEVgu8nD5XojUWGrehIcvJduVRLD3_6GpMfi3cIxGvFvNuiJq9DS73JKADLf8k-FTAPeJeq4g0p",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Arka Plan", "value": "Siber Neon", "rarity": "15%"},
+        {"type": "Gözlük", "value": "Lazer Vizör", "rarity": "4%"}
+      ]
+    },
+    {
+      "id": "nft_2",
+      "collectionId": "col_1",
+      "ownerId": "usr_1",
+      "creatorId": "usr_1",
+      "title": "Cyber Core #992",
+      "description": "Enerji çekirdeğinin görsel bir temsili.",
+      "category": "Oyun",
+      "price": 0.5,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBb987rbLahOG40pP-J3ubmuBEISseke7Suone34NcUy6hWPmG_41Vo5YANO1NmqJNeA1-DYTqDcxWDkILrfHXRICgFGiGqwjtF8nPbFvggV6YGHyls1xxFFJfDIHFllEhMTV6txv2x-Kd5MPlJSijqMQZQaa-0MPbvzc05ft1VKKHmaNXmVVmAV5QNP5kZjswv6PevijA-yYm69kVSI4VAEFsMUX497JOwiXI_ksp6OfKuZjC-VTSZ",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Enerji", "value": "Mavi Plazma", "rarity": "20%"},
+        {"type": "Çekirdek", "value": "Titanyum", "rarity": "8%"}
+      ]
+    },
+    {
+      "id": "nft_3",
+      "collectionId": "col_1",
+      "ownerId": "usr_1",
+      "creatorId": "usr_1",
+      "title": "Cyber Glitch #44",
+      "description": "Sistem hatası mı, yoksa yeni bir gerçeklik mi?",
+      "category": "Fotoğrafçılık",
+      "price": 0.8,
+      "status": "pending",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCkA--8uLMgEYSXBPJU7IX-xc7OGD7gXt1oQVuyI_BB4cYiTWf2MVT3nAE-fSzoKCetUclZio_h-N1tE93zRul_9rsxiLd75Lag_gmKdPpN4fQ_AWMEOgrgK_Jc-r5KpIh-3fYCMZ9j_yWtlB3-5zHF9Y1w-wkCZvPZhRigPmhkFRVPyTci1ykssUjYij0ulNuGwex6rtfzna9n4dHciU_TgBWh1-Tm0S1y59Jt0vKunXDrFRqnYNJ0",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Bozulma", "value": "Seviye 4", "rarity": "2%"}
+      ]
+    },
+    {
+      "id": "nft_4",
+      "collectionId": "col_2",
+      "ownerId": "usr_2",
+      "creatorId": "usr_2",
+      "title": "Neon Entity #777",
+      "description": "Neon tanrılarının dijital silüeti.",
+      "category": "Sanat",
+      "price": 4.2,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuA6Tq-0MxpZWUo4A2RGSx-GhllK6jixYMj6ri1cummrrCoQRUwz5L7pc7_wBjAf6kmWc5EUl9tLv7qB3h7qtrgg0ICVDzEI4Y_89nF-u3rXCoaOKTUAXv566TDkpeHAupF_OunpJFTk3PVqjP66PqxJcoXspGW5KJs5F0IGufqg-Sp1kaUMXZBt70K0G9laWi8Fg5ZmX5vT-MAHQLeWFwiaVQypTX4PJnvigT5mHDoIvBSEAcCJe0S4",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Aura", "value": "Altın Hologram", "rarity": "1%"}
+      ]
+    },
+    {
+      "id": "nft_5",
+      "collectionId": "col_2",
+      "ownerId": "usr_2",
+      "creatorId": "usr_2",
+      "title": "Neon Specter #88",
+      "description": "Gölgelerde gezinen bir neon ruh.",
+      "category": "Sanat",
+      "price": 1.2,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCw1jMR2inzN_FRbpEGXMigNFwtvMaucGL2Q5wzwVFgGUmoOQtlI0NmIJD4f59BD7Ov2FRAJ02P9UeU8ghejk_ZAgQNd_n4CRz6b3EbOGPVLsbGZzDJ9iP-1A7RF0IvUTHNeeCKb_Lu4LAXBeswgcpVUD6kofgAB4jnPSoCto8QY2T1VBcCrgL3y8Uj2-OSgZQiegiLSIMIkFq0OtkoNW3Vvn5BzaUNNcjgicJDTZXik6ZlXlHTNuYU",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Gölge", "value": "Karanlık Madde", "rarity": "6%"}
+      ]
+    },
+    {
+      "id": "nft_6",
+      "collectionId": "col_2",
+      "ownerId": "usr_2",
+      "creatorId": "usr_2",
+      "title": "Neon Matrix #12",
+      "description": "Gerçekliği yeniden yazan kod blokları.",
+      "category": "Müzik",
+      "price": 5.0,
+      "status": "owned",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD8t20w1FluzSyGSa3ZUquH7MbB8fxNojploNCuv2_qvFl3GPXr_3AeP2LSFYsgBKXmIbXMF0Fr0CZ7zmMdCrBi8kO9vfxtWoyyxt6ZiixWDPCC3Wtvzv07uRJqpLa9ZFsMXvLnZYOcsJQbtGiwISWcS9zTnYMmudeJmWEKfplpZM3U-HKt3IJIgPt0_0qjDfWIZi3t7Ne5W7_Pmt_KIYVKXxjG4QdmXUVynRKMCyn_ZK724RkP7GDm",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Kod", "value": "Binary Şelale", "rarity": "11%"}
+      ]
+    },
+    {
+      "id": "nft_7",
+      "collectionId": "col_3",
+      "ownerId": "usr_3",
+      "creatorId": "usr_3",
+      "title": "Pixel Paladin #001",
+      "description": "Retro 8-bit tarzı, nadir silahlı paladin karakteri.",
+      "category": "Oyun",
+      "price": 1.25,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD8t20w1FluzSyGSa3ZUquH7MbB8fxNojploNCuv2_qvFl3GPXr_3AeP2LSFYsgBKXmIbXMF0Fr0CZ7zmMdCrBi8kO9vfxtWoyyxt6ZiixWDPCC3Wtvzv07uRJqpLa9ZFsMXvLnZYOcsJQbtGiwISWcS9zTnYMmudeJmWEKfplpZM3U-HKt3IJIgPt0_0qjDfWIZi3t7Ne5W7_Pmt_KIYVKXxjG4QdmXUVynRKMCyn_ZK724RkP7GDm",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Silah", "value": "Excalibur", "rarity": "1%"},
+        {"type": "Zırh", "value": "Altın", "rarity": "5%"}
+      ]
+    },
+    {
+      "id": "nft_8",
+      "collectionId": "col_4",
+      "ownerId": "usr_2",
+      "creatorId": "usr_2",
+      "title": "Nebula Gözyaşları",
+      "description": "Yapay zeka ile üretilmiş derin uzayda renkli bir bulutsu.",
+      "category": "Fotoğrafçılık",
+      "price": 0.85,
+      "status": "pending",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCkA--8uLMgEYSXBPJU7IX-xc7OGD7gXt1oQVuyI_BB4cYiTWf2MVT3nAE-fSzoKCetUclZio_h-N1tE93zRul_9rsxiLd75Lag_gmKdPpN4fQ_AWMEOgrgK_Jc-r5KpIh-3fYCMZ9j_yWtlB3-5zHF9Y1w-wkCZvPZhRigPmhkFRVPyTci1ykssUjYij0ulNuGwex6rtfzna9n4dHciU_TgBWh1-Tm0S1y59Jt0vKunXDrFRqnYNJ0",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Lens", "value": "Geniş Açı", "rarity": "12%"},
+        {"type": "Filtre", "value": "Kızılötesi", "rarity": "8%"}
+      ]
+    },
+    {
+      "id": "nft_9",
+      "collectionId": "col_1",
+      "ownerId": "usr_1",
+      "creatorId": "usr_1",
+      "title": "Siber Punk Şehri",
+      "description": "Gece karanlığında parlayan neon şehir manzarası.",
+      "category": "Sanat",
+      "price": 2.50,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDWivv0vsudVlvUzFkWdrXWpulbVFANZcMAJXCIswE2D-9z8JAo9gTT24aBTuSrFbnipiVWigzj8DPWVFKJrARYd3pqRm0qzv2Scm2sFwzAt8oYUE1WjW8gPAsUKtGPle3fxkp6dSCf5RBwz7txobzFyE8nY7SFik3wwc40Ih7G_TEVgu8nD5XojUWGrehIcvJduVRLD3_6GpMfi3cIxGvFvNuiJq9DS73JKADLf8k-FTAPeJeq4g0p",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [
+        {
+          "id": "offer_901",
+          "buyerId": "usr_3",
+          "buyerName": "kripto_balina",
+          "amount": 2.0,
+          "status": "pending",
+          "timestamp": "2026-06-25T10:00:00.000Z"
+        }
+      ],
+      "traits": [
+        {"type": "Tema", "value": "Distopya", "rarity": "7%"}
+      ]
+    },
+    {
+      "id": "nft_10",
+      "collectionId": "col_3",
+      "ownerId": "usr_3",
+      "creatorId": "usr_3",
+      "title": "Sanal Boyut Kaskı",
+      "description": "Oyun içi kullanılabilen Legendary seviye kask zırhı.",
+      "category": "Oyun",
+      "price": 3.50,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBb987rbLahOG40pP-J3ubmuBEISseke7Suone34NcUy6hWPmG_41Vo5YANO1NmqJNeA1-DYTqDcxWDkILrfHXRICgFGiGqwjtF8nPbFvggV6YGHyls1xxFFJfDIHFllEhMTV6txv2x-Kd5MPlJSijqMQZQaa-0MPbvzc05ft1VKKHmaNXmVVmAV5QNP5kZjswv6PevijA-yYm69kVSI4VAEFsMUX497JOwiXI_ksp6OfKuZjC-VTSZ",
+      "tokenStandard": "ERC-1155",
+      "blockchain": "Ethereum",
+      "offers": [
+        {
+          "id": "offer_1001",
+          "buyerId": "usr_2",
+          "buyerName": "HoloCollector",
+          "amount": 3.0,
+          "status": "pending",
+          "timestamp": "2026-06-26T14:30:00.000Z"
+        }
+      ],
+      "traits": [
+        {"type": "Materyal", "value": "Altın Vizör", "rarity": "2%"}
+      ]
+    },
+    {
+      "id": "nft_11",
+      "collectionId": "col_2",
+      "ownerId": "usr_2",
+      "creatorId": "usr_2",
+      "title": "Sentetik Senfoni #2",
+      "description": "8-bit ve synthwave ritimlerinin eşsiz müzikal harmonisi.",
+      "category": "Müzik",
+      "price": 0.75,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuA6Tq-0MxpZWUo4A2RGSx-GhllK6jixYMj6ri1cummrrCoQRUwz5L7pc7_wBjAf6kmWc5EUl9tLv7qB3h7qtrgg0ICVDzEI4Y_89nF-u3rXCoaOKTUAXv566TDkpeHAupF_OunpJFTk3PVqjP66PqxJcoXspGW5KJs5F0IGufqg-Sp1kaUMXZBt70K0G9laWi8Fg5ZmX5vT-MAHQLeWFwiaVQypTX4PJnvigT5mHDoIvBSEAcCJe0S4",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "BPM", "value": "120", "rarity": "18%"}
+      ]
+    },
+    {
+      "id": "nft_12",
+      "collectionId": "col_1",
+      "ownerId": "usr_1",
+      "creatorId": "usr_1",
+      "title": "Neon Yansıma #01",
+      "description": "Yağmurlu bir su birikintisinde parlayan neon ışıkları.",
+      "category": "Sanat",
+      "price": 0.90,
+      "status": "approved",
+      "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuCw1jMR2inzN_FRbpEGXMigNFwtvMaucGL2Q5wzwVFgGUmoOQtlI0NmIJD4f59BD7Ov2FRAJ02P9UeU8ghejk_ZAgQNd_n4CRz6b3EbOGPVLsbGZzDJ9iP-1A7RF0IvUTHNeeCKb_Lu4LAXBeswgcpVUD6kofgAB4jnPSoCto8QY2T1VBcCrgL3y8Uj2-OSgZQiegiLSIMIkFq0OtkoNW3Vvn5BzaUNNcjgicJDTZXik6ZlXlHTNuYU",
+      "tokenStandard": "ERC-721",
+      "blockchain": "Ethereum",
+      "offers": [],
+      "traits": [
+        {"type": "Renk", "value": "Turkuaz", "rarity": "22%"}
+      ]
+    }
+  ]
+}
