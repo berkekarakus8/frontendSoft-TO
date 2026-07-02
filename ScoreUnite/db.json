@@ -1,0 +1,311 @@
+{
+  "leagues": [
+    {
+      "id": 1,
+      "name": "Premier League",
+      "country": "England",
+      "flag": "🇬🇧",
+      "logo": "https://media.api-sports.io/football/leagues/39.png"
+    },
+    {
+      "id": 2,
+      "name": "La Liga",
+      "country": "Spain",
+      "flag": "🇪🇸",
+      "logo": "https://media.api-sports.io/football/leagues/140.png"
+    },
+    {
+      "id": 3,
+      "name": "Trendyol Süper Lig",
+      "country": "Turkey",
+      "flag": "🇹🇷",
+      "logo": "https://media.api-sports.io/football/leagues/203.png"
+    },
+    {
+      "id": 4,
+      "name": "Champions League",
+      "country": "Europe",
+      "flag": "🇪🇺",
+      "logo": "https://media.api-sports.io/football/leagues/2.png"
+    }
+  ],
+  "teams": [
+    { "id": 1, "name": "Barcelona", "logo": "https://media.api-sports.io/football/teams/529.png", "leagueId": 2 },
+    { "id": 2, "name": "Real Madrid", "logo": "https://media.api-sports.io/football/teams/541.png", "leagueId": 2 },
+    { "id": 3, "name": "Galatasaray", "logo": "https://media.api-sports.io/football/teams/610.png", "leagueId": 3 },
+    { "id": 4, "name": "Fenerbahçe", "logo": "https://media.api-sports.io/football/teams/611.png", "leagueId": 3 },
+    { "id": 5, "name": "Manchester City", "logo": "https://media.api-sports.io/football/teams/50.png", "leagueId": 1 },
+    { "id": 6, "name": "Arsenal", "logo": "https://media.api-sports.io/football/teams/42.png", "leagueId": 1 }
+  ],
+  "matches": [
+    {
+      "id": 1,
+      "leagueId": 2,
+      "homeTeamId": 1,
+      "awayTeamId": 2,
+      "homeScore": 2,
+      "awayScore": 1,
+      "status": "LIVE",
+      "minute": 76,
+      "halfTimeScore": "1-0",
+      "stadium": "Spotify Camp Nou",
+      "referee": "Alejandro Hernández",
+      "spectators": 95230,
+      "weather": "Clear, 21°C",
+      "voteHome": 1450,
+      "voteDraw": 450,
+      "voteAway": 890,
+      "live": true,
+      "date": "2026-07-02",
+      "timeline": [
+        { "minute": 12, "type": "yellow_card", "team": "home", "player": "Pedri", "detail": "Tactical foul" },
+        { "minute": 34, "type": "goal", "team": "home", "player": "Lewandowski", "assist": "Raphinha", "detail": "Right-footed shot" },
+        { "minute": 58, "type": "goal", "team": "away", "player": "Vinícius Júnior", "assist": "Jude Bellingham", "detail": "Individual run" },
+        { "minute": 67, "type": "goal", "team": "home", "player": "Lamine Yamal", "assist": "Pedri", "detail": "Left-footed curler" },
+        { "minute": 72, "type": "yellow_card", "team": "away", "player": "Antonio Rüdiger", "detail": "Argument" },
+        { "minute": 75, "type": "substitution", "team": "home", "playerIn": "Fermín López", "playerOut": "Gavi" }
+      ],
+      "stats": {
+        "possession": { "home": 58, "away": 42 },
+        "shots": { "home": 14, "away": 9 },
+        "shotsOnTarget": { "home": 6, "away": 4 },
+        "shotsOffTarget": { "home": 5, "away": 3 },
+        "blockedShots": { "home": 3, "away": 2 },
+        "xg": { "home": 1.65, "away": 0.98 },
+        "passes": { "home": 498, "away": 362 },
+        "passAccuracy": { "home": 87, "away": 81 },
+        "corners": { "home": 7, "away": 4 },
+        "fouls": { "home": 11, "away": 14 },
+        "offsides": { "home": 2, "away": 1 },
+        "saves": { "home": 3, "away": 4 }
+      },
+      "lineups": {
+        "home": {
+          "formation": "4-3-3",
+          "manager": "Hansi Flick",
+          "starting": [
+            { "id": 101, "shirtNumber": 1, "shortName": "Ter Stegen", "rating": 7.1, "coordinates": { "x": 50, "y": 92 } },
+            { "id": 102, "shirtNumber": 2, "shortName": "Pau Cubarsí", "rating": 6.8, "coordinates": { "x": 38, "y": 80 } },
+            { "id": 103, "shirtNumber": 4, "shortName": "Araújo", "rating": 7.2, "coordinates": { "x": 62, "y": 80 } },
+            { "id": 104, "shirtNumber": 3, "shortName": "Balde", "rating": 7.0, "coordinates": { "x": 15, "y": 78 } },
+            { "id": 105, "shirtNumber": 23, "shortName": "Koundé", "rating": 7.3, "coordinates": { "x": 85, "y": 78 } },
+            { "id": 106, "shirtNumber": 6, "shortName": "Gavi", "rating": 6.7, "coordinates": { "x": 25, "y": 65 } },
+            { "id": 107, "shirtNumber": 8, "shortName": "Pedri", "rating": 8.1, "coordinates": { "x": 50, "y": 68 } },
+            { "id": 108, "shirtNumber": 21, "shortName": "De Jong", "rating": 7.4, "coordinates": { "x": 75, "y": 65 } },
+            { "id": 109, "shirtNumber": 11, "shortName": "Raphinha", "rating": 7.5, "coordinates": { "x": 20, "y": 53 } },
+            { "id": 110, "shirtNumber": 9, "shortName": "Lewandowski", "rating": 7.9, "coordinates": { "x": 50, "y": 50 } },
+            { "id": 111, "shirtNumber": 19, "shortName": "Lamine Yamal", "rating": 8.4, "coordinates": { "x": 80, "y": 53 } }
+          ],
+          "bench": [
+            { "id": 112, "shirtNumber": 13, "shortName": "Iñaki Peña", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 113, "shirtNumber": 16, "shortName": "Fermín López", "rating": 6.5, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 114, "shirtNumber": 18, "shortName": "Ansu Fati", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 115, "shirtNumber": 10, "shortName": "Dani Olmo", "rating": 0, "coordinates": { "x": 0, "y": 0 } }
+          ]
+        },
+        "away": {
+          "formation": "4-3-3",
+          "manager": "Carlo Ancelotti",
+          "starting": [
+            { "id": 201, "shirtNumber": 1, "shortName": "Courtois", "rating": 6.9, "coordinates": { "x": 50, "y": 8 } },
+            { "id": 202, "shirtNumber": 3, "shortName": "Militão", "rating": 6.5, "coordinates": { "x": 38, "y": 20 } },
+            { "id": 203, "shirtNumber": 22, "shortName": "Rüdiger", "rating": 7.0, "coordinates": { "x": 62, "y": 20 } },
+            { "id": 204, "shirtNumber": 23, "shortName": "Mendy", "rating": 6.8, "coordinates": { "x": 15, "y": 22 } },
+            { "id": 205, "shirtNumber": 2, "shortName": "Carvajal", "rating": 7.1, "coordinates": { "x": 85, "y": 22 } },
+            { "id": 206, "shirtNumber": 14, "shortName": "Tchouaméni", "rating": 6.6, "coordinates": { "x": 25, "y": 35 } },
+            { "id": 207, "shirtNumber": 5, "shortName": "Bellingham", "rating": 7.8, "coordinates": { "x": 50, "y": 32 } },
+            { "id": 208, "shirtNumber": 8, "shortName": "Valverde", "rating": 7.2, "coordinates": { "x": 75, "y": 35 } },
+            { "id": 209, "shirtNumber": 7, "shortName": "Vinícius Jr.", "rating": 8.0, "coordinates": { "x": 20, "y": 47 } },
+            { "id": 210, "shirtNumber": 9, "shortName": "Mbappé", "rating": 7.0, "coordinates": { "x": 50, "y": 50 } },
+            { "id": 211, "shirtNumber": 11, "shortName": "Rodrygo", "rating": 6.7, "coordinates": { "x": 80, "y": 47 } }
+          ],
+          "bench": [
+            { "id": 212, "shirtNumber": 13, "shortName": "Lunin", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 213, "shirtNumber": 10, "shortName": "Luka Modrić", "rating": 6.2, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 214, "shirtNumber": 6, "shortName": "Camavinga", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 215, "shirtNumber": 21, "shortName": "Brahim Díaz", "rating": 0, "coordinates": { "x": 0, "y": 0 } }
+          ]
+        }
+      }
+    },
+    {
+      "id": 2,
+      "leagueId": 3,
+      "homeTeamId": 3,
+      "awayTeamId": 4,
+      "homeScore": 1,
+      "awayScore": 1,
+      "status": "LIVE",
+      "minute": 42,
+      "halfTimeScore": "0-0",
+      "stadium": "RAMS Park",
+      "referee": "Halil Umut Meler",
+      "spectators": 52100,
+      "weather": "Rainy, 14°C",
+      "voteHome": 820,
+      "voteDraw": 400,
+      "voteAway": 780,
+      "live": true,
+      "date": "2026-07-02",
+      "timeline": [
+        { "minute": 15, "type": "yellow_card", "team": "away", "player": "Fred", "detail": "Unsporting behavior" },
+        { "minute": 23, "type": "yellow_card", "team": "home", "player": "Torreira", "detail": "Hard tackle" },
+        { "minute": 38, "type": "goal", "team": "home", "player": "Osimhen", "assist": "Sara", "detail": "Header" },
+        { "minute": 41, "type": "goal", "team": "away", "player": "En-Nesyri", "assist": "Tadić", "detail": "Tap-in" }
+      ],
+      "stats": {
+        "possession": { "home": 52, "away": 48 },
+        "shots": { "home": 6, "away": 5 },
+        "shotsOnTarget": { "home": 3, "away": 2 },
+        "xg": { "home": 0.88, "away": 0.76 },
+        "passes": { "home": 210, "away": 195 },
+        "corners": { "home": 3, "away": 2 },
+        "fouls": { "home": 9, "away": 8 }
+      },
+      "lineups": {
+        "home": {
+          "formation": "4-2-3-1",
+          "manager": "Okan Buruk",
+          "starting": [
+            { "id": 301, "shirtNumber": 1, "shortName": "Muslera", "rating": 6.8, "coordinates": { "x": 50, "y": 92 } },
+            { "id": 302, "shirtNumber": 6, "shortName": "Davinson", "rating": 7.0, "coordinates": { "x": 38, "y": 80 } },
+            { "id": 303, "shirtNumber": 25, "shortName": "Nelsson", "rating": 6.5, "coordinates": { "x": 62, "y": 80 } },
+            { "id": 304, "shirtNumber": 42, "shortName": "Abdülkerim", "rating": 6.7, "coordinates": { "x": 15, "y": 78 } },
+            { "id": 305, "shirtNumber": 23, "shortName": "Jelert", "rating": 6.4, "coordinates": { "x": 85, "y": 78 } },
+            { "id": 306, "shirtNumber": 34, "shortName": "Torreira", "rating": 6.9, "coordinates": { "x": 35, "y": 66 } },
+            { "id": 307, "shirtNumber": 18, "shortName": "Sara", "rating": 7.5, "coordinates": { "x": 65, "y": 66 } },
+            { "id": 308, "shirtNumber": 10, "shortName": "Mertens", "rating": 7.1, "coordinates": { "x": 50, "y": 55 } },
+            { "id": 309, "shirtNumber": 7, "shortName": "Kerem A.", "rating": 6.8, "coordinates": { "x": 20, "y": 53 } },
+            { "id": 310, "shirtNumber": 45, "shortName": "Osimhen", "rating": 7.8, "coordinates": { "x": 50, "y": 42 } },
+            { "id": 311, "shirtNumber": 9, "shortName": "Icardi", "rating": 6.9, "coordinates": { "x": 80, "y": 53 } }
+          ],
+          "bench": [
+            { "id": 312, "shirtNumber": 12, "shortName": "Günay", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 313, "shirtNumber": 8, "shortName": "Demirbay", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 314, "shirtNumber": 20, "shortName": "Jelert", "rating": 0, "coordinates": { "x": 0, "y": 0 } }
+          ]
+        },
+        "away": {
+          "formation": "4-2-3-1",
+          "manager": "José Mourinho",
+          "starting": [
+            { "id": 401, "shirtNumber": 40, "shortName": "Livaković", "rating": 6.7, "coordinates": { "x": 50, "y": 8 } },
+            { "id": 402, "shirtNumber": 2, "shortName": "Söyüncü", "rating": 6.8, "coordinates": { "x": 38, "y": 20 } },
+            { "id": 403, "shirtNumber": 6, "shortName": "Djiku", "rating": 6.6, "coordinates": { "x": 62, "y": 20 } },
+            { "id": 404, "shirtNumber": 24, "shortName": "Oosterwolde", "rating": 7.0, "coordinates": { "x": 15, "y": 22 } },
+            { "id": 405, "shirtNumber": 16, "shortName": "Müldür", "rating": 6.5, "coordinates": { "x": 85, "y": 22 } },
+            { "id": 406, "shirtNumber": 5, "shortName": "Yüksek", "rating": 6.8, "coordinates": { "x": 35, "y": 34 } },
+            { "id": 407, "shirtNumber": 35, "shortName": "Fred", "rating": 7.2, "coordinates": { "x": 65, "y": 34 } },
+            { "id": 408, "shirtNumber": 17, "shortName": "Szymański", "rating": 6.9, "coordinates": { "x": 50, "y": 45 } },
+            { "id": 409, "shirtNumber": 10, "shortName": "Tadić", "rating": 7.4, "coordinates": { "x": 20, "y": 47 } },
+            { "id": 410, "shirtNumber": 19, "shortName": "En-Nesyri", "rating": 7.6, "coordinates": { "x": 50, "y": 58 } },
+            { "id": 411, "shirtNumber": 97, "shortName": "Saint-Maximin", "rating": 7.1, "coordinates": { "x": 80, "y": 47 } }
+          ],
+          "bench": [
+            { "id": 412, "shirtNumber": 54, "shortName": "Eğribayat", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 413, "shirtNumber": 9, "shortName": "Džeko", "rating": 0, "coordinates": { "x": 0, "y": 0 } },
+            { "id": 414, "shirtNumber": 21, "shortName": "Kahveci", "rating": 0, "coordinates": { "x": 0, "y": 0 } }
+          ]
+        }
+      }
+    },
+    {
+      "id": 3,
+      "leagueId": 1,
+      "homeTeamId": 5,
+      "awayTeamId": 6,
+      "homeScore": 0,
+      "awayScore": 0,
+      "status": "SCHEDULED",
+      "minute": 0,
+      "stadium": "Etihad Stadium",
+      "referee": "Michael Oliver",
+      "spectators": 0,
+      "weather": "Cloudy, 16°C",
+      "voteHome": 0,
+      "voteDraw": 0,
+      "voteAway": 0,
+      "live": false,
+      "date": "2026-07-02",
+      "timeline": [],
+      "stats": {},
+      "lineups": {}
+    },
+    {
+      "id": 4,
+      "leagueId": 2,
+      "homeTeamId": 2,
+      "awayTeamId": 1,
+      "homeScore": 1,
+      "awayScore": 3,
+      "status": "FT",
+      "minute": 90,
+      "halfTimeScore": "0-1",
+      "stadium": "Santiago Bernabéu",
+      "referee": "Jesús Gil Manzano",
+      "spectators": 81044,
+      "weather": "Clear, 18°C",
+      "voteHome": 950,
+      "voteDraw": 310,
+      "voteAway": 1500,
+      "live": false,
+      "date": "2026-07-01",
+      "timeline": [
+        { "minute": 18, "type": "yellow_card", "team": "home", "player": "Carvajal", "detail": "Foul on Raphinha" },
+        { "minute": 29, "type": "goal", "team": "away", "player": "Lewandowski", "assist": "Balde", "detail": "Header" },
+        { "minute": 52, "type": "goal", "team": "away", "player": "Raphinha", "assist": "Yamal", "detail": "Tap-in" },
+        { "minute": 68, "type": "goal", "team": "away", "player": "Dani Olmo", "assist": "Pedri", "detail": "Right-footed shot" },
+        { "minute": 81, "type": "goal", "team": "home", "player": "Mbappé", "assist": "Bellingham", "detail": "Penalty" }
+      ],
+      "stats": {
+        "possession": { "home": 45, "away": 55 },
+        "shots": { "home": 11, "away": 16 },
+        "shotsOnTarget": { "home": 4, "away": 8 },
+        "xg": { "home": 1.12, "away": 2.14 },
+        "passes": { "home": 390, "away": 482 },
+        "corners": { "home": 5, "away": 8 },
+        "fouls": { "home": 12, "away": 10 }
+      },
+      "lineups": {}
+    }
+  ],
+  "news": [
+    {
+      "id": 1,
+      "title": "Ancelotti on El Clásico defeat: 'We didn't execute our plan'",
+      "thumbnail": "https://img.images.com/ancelotti.png",
+      "date": "2026-07-01",
+      "source": "SofaScore News"
+    },
+    {
+      "id": 2,
+      "title": "Hansi Flick praises Lamine Yamal's masterclass performance",
+      "thumbnail": "https://img.images.com/yamal.png",
+      "date": "2026-07-02",
+      "source": "ESPN"
+    },
+    {
+      "id": 3,
+      "title": "Osimhen scores again as Galatasaray face Fenerbahçe in tense derby",
+      "thumbnail": "https://img.images.com/derby.png",
+      "date": "2026-07-02",
+      "source": "L'Equipe"
+    }
+  ],
+  "standings": [
+    {
+      "leagueId": 2,
+      "table": [
+        { "position": 1, "teamId": 1, "played": 32, "won": 26, "draw": 4, "lost": 2, "goalsFor": 82, "goalsAgainst": 25, "points": 82, "form": ["W", "W", "W", "W", "W"] },
+        { "position": 2, "teamId": 2, "played": 32, "won": 23, "draw": 5, "lost": 4, "goalsFor": 74, "goalsAgainst": 28, "points": 74, "form": ["L", "W", "D", "W", "W"] }
+      ]
+    },
+    {
+      "leagueId": 3,
+      "table": [
+        { "position": 1, "teamId": 3, "played": 30, "won": 24, "draw": 4, "lost": 2, "goalsFor": 71, "goalsAgainst": 24, "points": 76, "form": ["D", "W", "W", "W", "D"] },
+        { "position": 2, "teamId": 4, "played": 30, "won": 23, "draw": 5, "lost": 2, "goalsFor": 68, "goalsAgainst": 20, "points": 74, "form": ["D", "W", "W", "L", "W"] }
+      ]
+    }
+  ]
+}

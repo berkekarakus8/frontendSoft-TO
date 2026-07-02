@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sofa-dark-bg text-sofa-dark-text font-sans antialiased overflow-hidden h-screen select-none;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c1017;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252f3f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Scroll snapping and custom styles */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+/* Live blinking animation */
+@keyframes pulse-live {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-live {
+  animation: pulse-live 1.5s infinite;
+}
+
+/* Football Field Styles */
+.football-field {
+  background-color: #2c6e39;
+  background-image: linear-gradient(
+    to bottom,
+    #2c6e39 0%, #2c6e39 10%,
+    #276434 10%, #276434 20%,
+    #2c6e39 20%, #2c6e39 30%,
+    #276434 30%, #276434 40%,
+    #2c6e39 40%, #2c6e39 50%,
+    #276434 50%, #276434 60%,
+    #2c6e39 60%, #2c6e39 70%,
+    #276434 70%, #276434 80%,
+    #2c6e39 80%, #2c6e39 90%,
+    #276434 90%, #276434 100%
+  );
+  position: relative;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.field-center-circle {
+  border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.field-center-line {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.field-penalty-area-top {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.field-penalty-area-bottom {
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgba(255, 255, 255, 0.4);
+  border-right: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.field-goal-area-top {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.field-goal-area-bottom {
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
